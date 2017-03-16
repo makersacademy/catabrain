@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Area, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'validates presence of name' do
+    expect(Area.new(name:nil)).not_to be_valid
+  end
 end
